@@ -1,0 +1,46 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:30am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.CONT.DEL -- Contact Delete **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.ACCT.MAINT">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.CONT.MAINT">&nbsp;Edit Users</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBPROC.WOE.SEL.CONTACT&TRACKNO=&TRK&&CON.NO=&CONT.ID&">&nbsp;&NAME&</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Delete User</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;Note: Once a contact is deleted the information cannot be retrieved</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" method="POST" name="the_form">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.CONT.DEL">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type="hidden" name="CONT.ID" value="&CONT.ID&">
+        <input type="hidden" name="CONT.LOGIN" value="&CONT.LOGIN&">
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>&PASSER&<br><b>Are you <i>sure</i> you want to delete &NAME&? </b></td>
+            </tr>
+
+            <tr>
+              <td align="center"><br><input type="Submit" name="SUBMIT" value="Delete"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

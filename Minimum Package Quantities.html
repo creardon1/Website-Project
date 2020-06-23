@@ -1,0 +1,67 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:04am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.MIN.QTYS -- Minimum Package Quantities **-->
+<td width="100%" valign="top">
+    <table border="0" cellpadding="3" cellspacing="0" width="100%">
+      <tr>
+        <td class="breadcrumbrow"><img src="/WOEB/images/triangle.gif" width="10" height="9" border="0" alt="">&nbsp;Minimum Package Quantities</td>
+      </tr>
+
+      <tr>
+        <td class="items" width="100%">&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width="560"><img src="/WOEB/images/spacer.gif" width="560" height="1" border="0" alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width="100%"><br>
+        <form action="/eserv/eclipse.ecl" method="POST">
+        <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.MIN.QTYS">
+        <input type="HIDDEN" name="CHECKOUT" value="&CHECKOUT&">
+        <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td class="highlight" colspan="6" align="center"><b>&ITEM.CT& to Review</b></td>
+            </tr>
+
+            <tr>
+              <td valign="bottom" align="left"><b>New Qty</b></td>
+              <td valign="bottom" align="left"><b>Old Qty</b></td>
+              <td valign="bottom" align="left"><b>Min Pkg Qty</b></td>
+              <td valign="bottom" align="left"><b>Item Description</b></td>
+              <td valign="bottom" align="right"><b>Unit Price</b></td>
+              <td valign="bottom" align="right"><b>Ext Price</b></td>
+            </tr>
+&PN.LOOP.BEG&
+            <tr>
+              <td valign="top" align="left">
+                 &QTY.FIELD&
+                 <input type="HIDDEN" NAME="&PNX&" VALUE="&PN&">
+              </td>
+              <td valign="top" align="left">&OLD&</td>
+              <td valign="top" align="left">&MIN&</td>
+              <td valign="top" align="left">&DESC&</td>
+              <td valign="top" align="right">&CPRC&</td>
+              <td valign="top" align="right">&EXT&</td>
+            </tr>
+&PN.LOOP.END&
+            <tr>
+              <td colspan="6" align="center">Your order has been changed to reflect the necessary minimum quantities.</td>
+            </tr>
+
+            <tr>
+              <td colspan="6" align="center"><br><input type="submit" value="Continue"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

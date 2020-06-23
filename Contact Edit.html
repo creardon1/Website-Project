@@ -1,0 +1,144 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:31am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.CONT.EDIT -- Contact Edit **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.ACCT.MAINT">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.CONT.MAINT">&nbsp;Edit Users</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;&BREADCRUMB.NAME&</a></td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+        function disabler(the_form)
+        {
+          if (document.the_form.COADDR.checked)
+          {
+            document.the_form.ADDR1.value = "&ADDR1.ENT&";
+            document.the_form.ADDR1.disabled = true;
+            document.the_form.ADDR2.value = "&ADDR2.ENT&";
+            document.the_form.ADDR2.disabled = true;
+            document.the_form.CITY.value = "&CITY.ENT&";
+            document.the_form.CITY.disabled = true;
+            document.the_form.ST.value = "&ST.ENT&";
+            document.the_form.ST.disabled = true;
+            document.the_form.ZIP.value = "&ZIP.ENT&";
+            document.the_form.ZIP.disabled = true;
+          }
+          else if (!document.the_form.COADDR.checked)
+          {
+            document.the_form.ADDR1.value = "&ADDR1&";
+            document.the_form.ADDR1.disabled = false;
+            document.the_form.ADDR2.value = "&ADDR2&";
+            document.the_form.ADDR2.disabled = false;
+            document.the_form.CITY.value = "&CITY&";
+            document.the_form.CITY.disabled = false;
+            document.the_form.ST.value = "&STATE&";
+            document.the_form.ST.disabled = false;
+            document.the_form.ZIP.value = "&ZIP&";
+            document.the_form.ZIP.disabled = false;
+          }
+        }
+        </SCRIPT>
+        <form action="/eserv/eclipse.ecl" method="POST" name="the_form">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.CONT.EDIT">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type="hidden" name="CON.NO" value="&CONT.ID&">
+        <input type="hidden" name="CONT.LOGIN" value="&WOE.LOGIN&">
+
+          <table border="0" cellpadding="3" cellspacing="0" width=100%>
+            <tr>
+              <td><b>*First Name:</b></td>
+              <td><input type="text" value="&FNAME&" name="FNAME" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Last Name:</b></td>
+              <td><input type="text" value="&LNAME&" name="LNAME" size="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>&nbsp;Title:</b></td>
+              <td><input type="text" name="TITLE" value="&TITLE&" size="50"></td>
+            </tr>
+
+            <tr>
+              <td colspan=2><input type="checkbox" name="COADDR" &CHECKED& onClick="javascript:disabler();"><b>Use Company Address</b></td>
+            </tr>
+
+            <tr>
+              <td><b>*Address 1:</b></td>
+              <td><input type="text" name="ADDR1" size="50" value="&ADDR1&" &DISABLED&></td>
+            </tr>
+
+            <tr>
+              <td><b>&nbsp;Address 2:</b></td>
+              <td><input type="text" name="ADDR2" size="50" value="&ADDR2&" &DISABLED&></td>
+            </tr>
+
+            <tr>
+              <td><b>*City:</b></td>
+              <td><input type="text" name="CITY" size="20" value="&CITY&" &DISABLED&></td>
+            </tr>
+
+            <tr>
+              <td><b>*State:</b></td>
+              <td><input type="text" name="ST" size="3" value="&STATE&" &DISABLED&></td>
+            </tr>
+
+            <tr>
+              <td><b>*Zip:</b></td>
+              <td><input type="text" name="ZIP" size="10" value="&ZIP&" &DISABLED&></td>
+            </tr>
+
+            <tr>
+              <td><b>&PHONE.REQ&Phone:</b></td>
+              <td><input type="text" name="PHONE" value="&PHONE&" size="23"></td>
+            </tr>
+
+            <tr>
+              <td><b>&EMAIL.REQ&Email:</b></td>
+              <td><input type="text" name="EMAIL" value="&EMAIL&" size="50"></td>
+            </tr>
+
+            <tr>
+              <td><b>&nbsp;Login</b> (6-40 characters):</td>
+              <td><input type="text" name="WOE.LOGIN" value="&WOE.LOGIN&"></td>
+            </tr>
+
+            <tr>
+              <td><b>&nbsp;New Password</b> (6-14 characters):</td>
+              <td><input type="PASSWORD" name="WOE.PASSWORD" value=""></td>
+            </tr>
+            <tr>
+              <td><b>&nbsp;Confirm Password</b>:</td>
+              <td><input type="PASSWORD" name="WOE.PASSWORD.CONFIRM" value=""></td>
+            </tr>
+
+            &ACCT.MGR.INFO&
+
+            <tr>
+              <td colspan=2 align="center"><br><input type="submit" name="SUBMIT" value="Submit">&nbsp;<input type="submit" name="DELETE" value="Delete"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>
+<script>disabler();</script>

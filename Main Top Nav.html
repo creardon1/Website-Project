@@ -1,0 +1,97 @@
+<!--** CUS.FORM Version# 7 - 23/06/2020 - 10:02am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.TOP.NAV -- Main Top Nav **-->
+<style type="text/css"><!-- .menuBar { background-color: #09467D; color: white; text-decoration: none; font-weight: bold; } --></style>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td width="30%" background="/WOEB/images/back_right.gif">&nbsp;</td><td background="/WOEB/images/side_runner_left.gif" style="width: 10px; background-repeat: repeat-y"><img src="/WOEB/images/spacer.gif" width="10" height="1"></td><td width="762" valign="top" bgcolor="#FFFFFF" style="padding-left: 10px; padding-right: 10px;">
+
+<table class="menuBar" cellpadding=0 cellspacing=4 width="720">
+  <tr class="menuBar">
+    <td width="100" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&"                                  class="menuBar" onMouseover="dropdownmenu(this, event, mainMenu,  '175px')"    onMouseout="delayhidemenu()">Main</a></td>
+    <td width="100" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.ACCT.MAINT"   class="menuBar" onMouseover="dropdownmenu(this, event, myAccount, '175px')"    onMouseout="delayhidemenu()">My Account</a></td>
+    <td width="150" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.GROUP.MAINT"  class="menuBar" onMouseover="dropdownmenu(this, event, myProdGroups, '175px')" onMouseout="delayhidemenu()">My Product Groups</a></td>
+    <td width="100" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.CART.MAINT"   class="menuBar" onMouseover="dropdownmenu(this, event, myCarts, '175px')"      onMouseout="delayhidemenu()">My Carts</a></td>
+    <td width="100" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.ORDER.REVIEW" class="menuBar" onMouseover="dropdownmenu(this, event, checkout, '175px')"     onMouseout="delayhidemenu()">Checkout</a></td>
+    <td width="100" align="center"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.LOGOFF"       class="menuBar" onMouseover="dropdownmenu(this, event, logoff, '120px')"       onMouseout="delayhidemenu()">Logoff</a></td>
+  </tr>
+</tr>
+</table>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function openUp(href)
+{
+  window.open(href,"","height=400,width=630,scrollbars=yes,resizable");
+}
+//-->
+</script>
+
+<table border="0" cellpadding="0" cellspacing="0" width="720">
+  <tr>
+    <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+    <td>
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="logo" rowspan="3" width="150"><img src="/WOEB/images/logo.gif" width="150" height="70"></td>
+          <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+          <td class="topnav" align="center" valign="middle" width=100%>&TOP.INFO& </td>
+        </tr>
+
+        <tr>
+          <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+          <td class="lightline" width="100%" height="1"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+        </tr>
+
+        <tr>
+          <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+          <td class="topnav" valign="top" align="center" width=100%>
+            <table border=0 cellpadding=0 cellspacing=0 width=100%>
+              <tr>
+                <td>
+                  <table border=0 cellpadding=0 cellspacing=3>
+                    <form action="/eserv/eclipse.ecl" method="POST">
+                    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MAIN">
+                    <input type="hidden" name="TRACKNO" value="&TRK&">
+                    <tr>
+                      <td class="searchbox" valign="middle">
+                      <a class="header" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.SEARCH&TRACKNO=&TRK&">Search</a></td>
+                      <td align="bottom"><a href="/WOEB/help/search.html" title="Click for Help" onclick="openUp(this.href);return false;">
+                      <img src="/WOEB/help/images/help2.gif" alt="Help" border=0 height=11 width=11></a></td>
+                      <td><input type=text size=&SEARCH.INPUT& name="SEARCH" value=""></td>
+                      <td><input type=image src="/WOEB/images/go.gif" border=0></td>
+                    </tr>
+                    </form>
+                  </table>
+                </td>
+
+                &REORDER.LINK&
+
+                <td align="right">
+                  <table border=0 cellpadding=0 cellspacing=3>
+                    <form action="/eserv/eclipse.ecl" method="POST">
+                    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MAIN">
+                    <input type="hidden" name="TRACKNO" value="&TRK&">
+                    <tr>
+                      <td class="searchbox" valign="middle">
+                      <a class="header" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.QUICKPAD&TRACKNO=&TRK&">Quickpad</a></td>
+                      <td><a href="/WOEB/help/quickpad.html" title="Click here for Help" class="header" onclick="openUp(this.href);return false;">
+                      <img src="/WOEB/help/images/help2.gif" alt="Help" border=0 height=11 width=11></a></td>
+                      <td><input type=text size=&QUICKPAD.INPUT& name="PN1" value="Part#1" onfocus="if (this.value=='Part#1') {this.value=''}" onblur="if (this.value=='') {this.value='Part#1'}"></td>
+                      <td><input type=text size=&QUICKPAD.INPUT& name="PN2" value="Part#2" onfocus="if (this.value=='Part#2') {this.value=''}" onblur="if (this.value=='') {this.value='Part#2'}"></td>
+                      <td><input type=text size=&QUICKPAD.INPUT& name="PN3" value="Part#3" onfocus="if (this.value=='Part#3') {this.value=''}" onblur="if (this.value=='') {this.value='Part#3'}"></td>
+                      <td><input type=image src="/WOEB/images/go.gif" border=0></td>
+                    </tr>
+                    </form>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="darkline" colspan=3><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+  </tr>
+</table>

@@ -1,0 +1,138 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:18am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.ORDERS -- Open Orders, Open Bids, Search *-->
+<td width=100% valign="top">
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/woeb.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("testdiv1");</SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript" type="text/javascript">
+      function validateDates() {
+        if(!isEDate(document.Orders.STDT.value)) {
+          document.Orders.STDT.focus();
+          alert('Improper Date Format');
+          return false;
+        }
+
+        if(!isEDate(document.Orders.ENDDT.value)) {
+          document.Orders.ENDDT.focus();
+          alert('Improper Date Format');
+          return false;
+        }
+
+        return true;
+     }
+    </SCRIPT>
+
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;&TITLE&</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&ACCT.TYPE.MSG&</td>
+              <td class="items" align="right"><a href="/WOEB/help/&HELPLINK&.html" onclick="openUp(this.href);return false;">&HELPTEXT&<img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form onSubmit="return validateDates();" action="/eserv/eclipse.ecl" name="Orders" method="POST">
+        <input type ="hidden" name="PROCID" value="WEBPROC.WOE.ORDERS">
+        <input type ="hidden" name="TRACKNO" value="&TRK&">
+        <input type ="hidden" name="TYPE" value="&ACT.TYPE&">
+
+          <table border=0 cellpadding=1 cellspacing=0 width=100%>
+            <tr>
+              <td><b>Customer:</b> &NAME& </td>
+              <td><b>Phone:</b> &PHONE& </td>
+            </tr>
+
+            <tr>
+              <td colspan=2><b>Address:</b> &ADDR& </td>
+            </tr>
+          </table>
+
+          <br>
+
+          <table border=0 cellpadding=1 cellspacing=0 width=100%>
+            <tr>
+              <td class="leftnav" colspan=4><b>&SELECT.MSG&</b></td>
+            </tr>
+            <tr>
+              <td><b>From:&nbsp;</b></td>
+              <td><b>To:&nbsp;</b></td>
+              <td rowspan="3"><b>Select By:&nbsp;</b><br>
+              <input type="radio" name="SEARCH.BY" value="ORD" &ORD.CHKD&>Order Date<br>
+              <input type="radio" name="SEARCH.BY" value="SHIP" &SHIP.CHKD&>Ship Date</td>
+              <td rowspan="3"><input type=image src="/WOEB/images/GetTrans.gif" border=0></td>
+            </tr>
+            <tr>
+              <td><input type=text name="STDT" value="&DISP.ST.DT&" maxlength=10 size=10>&nbsp;<a href="#"onClick="cal1x.select(document.Orders.STDT,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+              <td><input type=text name="ENDDT" value="&DISP.END.DT&" maxlengty=10 size=10>&nbsp;<a href="#" onClick="cal1x.select(document.Orders.ENDDT,'anchor2x','MM/dd/yyyy'); return false;" NAME="anchor2x" ID="anchor2x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+            </tr>
+            <tr>
+              <td>(mm/dd/yyyy)&nbsp;</td>
+              <td>(mm/dd/yyyy)&nbsp;</td>
+            </tr>
+          </table>
+
+          <br>
+
+          <table border=0 cellspacing=0 cellpadding=3 width=100%>
+            <tr>
+              <td class="items" width=100% colspan="7">
+                &ITEM.HTML&
+              </td>
+            </tr>
+
+            <tr>
+              <td class="leftnav"><b>Order&nbsp;Number</b></td>
+              <td class="leftnav"><b>Status</b></td>
+              <td class="leftnav"><b>Order Date</b></td>
+              <td class="leftnav"><b>Ship Date</b></td>
+              <td class="leftnav"><b>Ship-To</b></td>
+              <td class="leftnav"><b>PO #</b></td>
+              <td class="leftnav"><b>Release #</b></td>
+            </tr>
+&ORD.LOOP.BEG&
+            <tr>
+              <td>&ORDNO& </td>
+              <td>&STATUS& </td>
+              <td>&ORD.DT& </td>
+              <td>&SHIP.DT& </td>
+              <td>&SHIPTO& </td>
+              <td>&PONUM& </td>
+              <td>&RELNO& </td>
+            </tr>
+&ORD.LOOP.END&
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td class=leftnav><a class="leftnavlink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&DISP.ID=WEBDISP.WOEB.ORD.SEARCH&TYPE=&ACT.TYPE&&TRACKNO=&TRK&">Advanced Search</a>&nbsp;&nbsp;&nbsp; <b>Or you can search by Order # or PO # or Release # :</b></td>
+              <td class=leftnav align=right>&nbsp;
+              <input type=hidden name="RESEARCH" VALUE="&RESEARCH&">
+              <input type=text name="WORDS" size="15" value="&WORDS&">&nbsp;<input type=image src="/WOEB/images/go.gif" border=0 align=absmiddle></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+    <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

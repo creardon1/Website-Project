@@ -1,0 +1,60 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:42am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.SAVE.CART.HTML -- Save Cart **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.CART.MAINT&TRACKNO=&TRK&">&nbsp;My Carts</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Save Current Cart</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" method="POST">
+        <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.SAVE.CART">
+        <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+
+          <table border="0" cellpadding="5" cellspacing="0" width=100%>
+            &OPTIONS.HTML&
+            <tr>
+              <td><b>Title:&nbsp;&nbsp;</b>
+              <input type="TEXT" name="TITLE" value="&TITLE&" size="35"></td>
+            </tr>
+          </table>
+&PN.LOOP.BEG&
+          &PN.HTML&
+&PN.LOOP.END&
+          <table border=0 cellspacing=0 cellpadding=5 width=100%>
+            <tr>
+              <td align="center" colspan=2><b>Comments</b></td>
+            </tr>
+
+            <tr>
+              <td align="center">
+              <textarea name="COMMENTS" rows=3 cols=60 wrap="VIRTUAL">&COMMENTS& </textarea></td>
+            </tr>
+
+            <tr>
+              <td align="center"><br>
+              <input type="submit" name="SAVE" value="Save and Continue">
+              <input type="submit" name="LOGOFF" value="Save and Logoff"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

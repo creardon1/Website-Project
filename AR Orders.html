@@ -1,0 +1,219 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:20am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.AR.ORDERS **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=&TYPE.PROCID&&TRACKNO=&TRK&">&nbsp;&TYPE&</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;&TYPE.DESC&: &ORDNO&</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+<!--SUBMIT-->
+      <tr>
+        <td><font size="+2">&ORDNO&</font></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100% align=center valign=top>
+        <form method="post" action="/eserv/eclipse.ecl">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.AR.ORDERS">
+        <input type="hidden" name="OID" value="&OID&">
+        <input type="hidden" name="GEN" value="&GEN&">
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td width=50% class="leftnavheader"><b>Shipping Address</b></td>
+              <td width=50% class="leftnavheader"><b>Billing Address</b></td>
+            </tr>
+
+            <tr>
+              <td width=50%>
+              &ST.NAME& <br>
+              &ST.ADD1& <br>
+              &ST.ADD2& <br>
+              &ST.CITY& &ST.ST& &ST.ZIP& </td>
+              <td width=50%>
+              &BT.NAME& <br>
+              &BT.ADD1& <br>
+              &BT.ADD2& <br>
+              &BT.CITY& &BT.ST& &BT.ZIP& </td>
+            </tr>
+
+            <tr>
+              <td width=50% class="leftnavheader" valign="top">
+              Shipping Instructions</td>
+              <td width=50% class="leftnavheader">
+              Order Details</td>
+            </tr>
+
+            <tr>
+              <td>&SHIP.INS& </td>
+              <td rowspan=2>
+                <table width=100% cellpadding=0 cellspacing=0>
+                  <tr>
+                    <td><b>Order Date:</b></td>
+                    <td align="right">&ORD.DATE& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Required Date:</b></td>
+                    <td align="right">&REQDT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ship Date:</b></td>
+                    <td align="right">&SHIP.DT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ship Via:</b></td>
+                    <td align="right">&SHIPVIA& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Branch:</b></td>
+                    <td align="right">&BRANCH& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ordered By:</b></td>
+                    <td align="right">&ORD.BY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Phone #:</b></td>
+                    <td align="right">&PHONE& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>PO #:</b></td>
+                    <td align="right">&PO.NUM& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Release #:</b></td>
+                    <td align="right">&REL.NO& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Status:</b></td>
+                    <td align="right">&STATUS& </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td valign="top"><b>Shipping Links:</b>&SHIP.LINKS& </td>
+            </tr>
+          </table>
+
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td align=center class=leftnavheader><b>Qty</b></td>
+              <td class=leftnavheader><b>Item Description</b></td>
+              <td class="leftnavheader" align="right"><b>Your Price</b></td>
+              <td class="leftnavheader" align="right"><b>Ext Price</b></td>
+            </tr>
+&PN.LOOP.BEG&
+            <tr>
+              <td align=center valign="top">&QTY&</td>
+              <td valign=top>&DESC& <i>&CMT&</i></td>
+              <td align="right" valign="top">&CPRC&</td>
+              <td align="right" valign="top">&EXT&</td>
+            </tr>
+&PN.LOOP.END&
+          </table>
+
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td width=50%>
+                <table border="0" cellpadding="1" cellspacing="0" width=100%>
+                  <tr>
+                    <td>&XCURR.MSG&</b></td>
+                  </tr>
+
+                  <tr>
+                    <td>&TERMS.D&</b></td>
+                  </tr>
+
+                  <tr>
+                    <td>&NS.MSG&</b></td>
+                  </tr>
+                </table>
+              </td>
+
+              <td width=50%>
+                <table border="0" cellpadding="1" cellspacing="0" width=100%>
+                  <tr>
+                    <td class="highlight"><b>Subtotal</b></td>
+                    <td class="highlight" align="RIGHT">&SUBTOL& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Tax</b></td>
+                    <td class="highlight" align="RIGHT">&TAX& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Freight</b></td>
+                    <td class="highlight" align="RIGHT">&FREIGHT& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Handling</b></td>
+                    <td class="highlight" align="RIGHT">&HAND& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Discount</b></td>
+                    <td class="highlight" align="RIGHT">&DISC& </td>
+                  </tr>
+
+                  &FET.TOL&
+
+                  <tr>
+                    <td class="leftnavheader"><b>Order Total</b></td>
+                    <td class="leftnavheader" align="RIGHT">&OTOT& </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+             <tr>
+                <td class="leftnavheader" align="center"><b>Attachments:</b></td>
+             </tr>
+&ATTACHMENT.LOOP&
+          </table>
+
+<!--/SUBMIT-->
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td align="center">&SIG.IMG&</td>
+            </tr>
+            <tr>
+              <td align=center><img src="/WOEB/images/printerfriendly_white.gif" height=32 alt="" border=0><a href="javascript:var new_window=window.open('/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.PRINT&DISP.ID=WEBDISP.WOE.AR.ORDERS&TRACKNO=&TRK&&SIG.LINK&','Printer','resizable,scrollbars,width=640,height=640')">Click here for a printer friendly version of this page</a></td>
+            </tr>
+          </table>
+          <p>&BUTTON&
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

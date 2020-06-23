@@ -1,0 +1,53 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:37am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.GROUP.DETAIL -- Product Group Detail **-->
+<td width="100%" valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width="100%">
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.GROUP.MAINT">&nbsp;My Product Groups</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;&GRP.NAME&</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&PASSER&</td>
+              <td class="items" align="right"><a href="/WOEB/help/add2ProductGroups.html" onclick="openUp(this.href);return false;">Product Groups Help <img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+      <tr>
+        <td width=560 align="right"><a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.GROUP.DETAIL&GROUP=&URL.GRP.ID&&SORTBY=&SORTBY&&TRACKNO=&TRK&">&SORT.MSG&</a></td>
+      </tr>
+      <tr>
+        <td class="bodytext" width=100% align="center">
+        <form action="/eserv/eclipse.ecl" method="POST" name="group_detail">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.GROUP.DETAIL">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type="hidden" name="GROUP" value="&GRP.ID&">
+          <table border=0 cellpadding=2 cellspacing=0 width=100%>
+            &ITEMS&
+            <tr>
+              <td align="center" colspan="4"><br>
+              <input type="image" name="UPDATE" src="/WOEB/images/update.gif" border=0>
+              <input type="image" name="COMPAREITEMS" src="/WOEB/images/compareitems.gif" border=0>
+              <input type="image" name="REMOVEITEMS" src="/WOEB/images/removeitems.gif" border=0>
+              <input type="image" name="ADDITEMS" src="/WOEB/images/orderadd.gif" border=0></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

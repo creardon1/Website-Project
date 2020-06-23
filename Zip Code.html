@@ -1,0 +1,72 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 11:02am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.ZIP.CODE -- Zip Code **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.SHIP.INFO&TRACKNO=&TRK&">&nbsp;Shipping Information</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Select a Zip Code</td>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <form action="/eserv/eclipse.ecl" method="POST">
+      <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.ZIP.CODE">
+      <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+      <input type="HIDDEN" name="RET.TO" value="&RET.TO&">
+      <input type="HIDDEN" name="CN" value="&CN&">
+
+      <tr align=center>
+        <td><br><b>City, State, and Zip Code Do Not Match</b></td>
+      </tr>
+
+      <tr align=center>
+        <td>&CURINFO&</td>
+      </tr>
+
+      <tr align=center>
+        <td><br><b>Select a valid city and state for Zip Code &CURZIP&</b></td>
+      </tr>
+
+      <tr align=center>
+        <td><br><b>&ZIPINFO&</b></td>
+      </tr>
+
+      <tr align=center>
+        <td><br><b>Or re-enter the city, state, and Zip Code</b></td>
+      </tr>
+
+      <tr align=center>
+        <td>
+          <table border=0 cellpadding=0 cellspacing=5>
+            <tr>
+              <td width="150"><b>City</b></td>
+              <td width="30"><b>State</b></td>
+              <td width="80"><b>Zip</b></td>
+            </tr>
+
+            <tr>
+              <td><input type="text" name="NEWCITY" value="" size="25"></td>
+              <td><input type="text" name="NEWSTATE" value="" size="5"></td>
+              <td><input type="text" name="NEWZIP" value="" size="10"></td>
+            </tr>
+
+            <tr align=center>
+              <td colspan=3><br><input type="submit" value="Submit"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

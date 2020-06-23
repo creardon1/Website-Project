@@ -1,0 +1,204 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:24am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.ORDER.SUBMIT -- Order Submit **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Order Submitted</td>
+      </tr>
+<!--SUBMIT-->
+      <tr>
+        <td class="items" width=100%>&nbsp;Thank you for your order</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td colspan=2 class=header>
+              <i>Your order number is:</i>&nbsp;<b>&ORDNO&</b></td>
+            </tr>
+            &CREDIT.MSG&
+
+            <tr>
+              <td width=50% class="items"><b>Shipping Address</b></td>
+              <td width=50% class="items"><b>Billing Address</b></td>
+            </tr>
+
+            <tr>
+              <td width=50%>
+              &ST.NAME& <br>
+              &ST.ADD1& <br>
+              &ST.ADD2& <br>
+              &ST.CITY& &ST.ST& &ST.ZIP& </td>
+              <td width=50%>
+              &BT.NAME& <br>
+              &BT.ADD1& <br>
+              &BT.ADD2& <br>
+              &BT.CITY& &BT.ST& &BT.ZIP& </td>
+            </tr>
+
+            <tr>
+              <td width=50% class="items" valign="top">
+              Shipping Instructions</td>
+              <td width=50% class="items">
+              Order Details</td>
+            </tr>
+
+            <tr>
+              <td>&SHIP.INS& </td>
+              <td rowspan=2>
+                <table width=100% cellpadding=0 cellspacing=0>
+                  <tr>
+                    <td><b>Order Date:</b></td>
+                    <td align="right">&ORD.DATE& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Required Date:</b></td>
+                    <td align="right">&REQDT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ship Date:</b></td>
+                    <td align="right">&SHIP.DT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ship Via:</b></td>
+                    <td align="right">&SHIPVIA& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Ordered By:</b></td>
+                    <td align="right">&ORD.BY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Phone #:</b></td>
+                    <td align="right">&PHONE& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>PO #:</b></td>
+                    <td align="right">&PO.NUM& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Release #:</b></td>
+                    <td align="right">&REL.NUM& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Status:</b></td>
+                    <td align="right">&STAT& </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+          <table border="0" cellpadding="2" cellspacing="0" width=100%>
+            <tr>
+              <td align="center" class="items" width="50"><b>Qty</b></td>
+              <td class="items"><b>Item Description</b></td>
+              &AVAIL.COL&
+              <td class="items" align="right" width="85"><b>Your Price</b></td>
+              <td class="items" align="right" width="85"><b>Ext Price</b></td>
+            </tr>
+&PN.LOOP.BEG&
+            <tr>
+              <td align=center valign="top">&QTY& </td>
+              <td valign="top">&DESC& &CUS.PN& &LN.CMT& </td>
+              &AVAIL.LI&
+              <td align="right" valign="top">&CPRC& </td>
+              <td align="right" valign="top">&EXT& </td>
+            </tr>
+&PN.LOOP.END&
+          </table>
+
+          <table border="0" cellpadding="1" cellspacing="0" width=100%>
+            <tr>
+              <td width=50%>
+                <table border="0" cellpadding="1" cellspacing="0" width=100%>
+                  <tr>
+                    <td>&XCURR.MSG&</b></td>
+                  </tr>
+
+                  <tr>
+                    <td>&TERMS.D&</b></td>
+                  </tr>
+
+                  <tr>
+                    <td>&NS.MSG&</b></td>
+                  </tr>
+                </table>
+              </td>
+
+              <td width=50%>
+                <table border="0" cellpadding="1" cellspacing="0" width=100%>
+                  <tr>
+                    <td class="highlight"><b>Subtotal</b></td>
+                    <td class="highlight" align="RIGHT">&SUBTOL& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Tax</b></td>
+                    <td class="highlight" align="RIGHT">&TAX& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Freight</b></td>
+                    <td class="highlight" align="RIGHT">&FREIGHT& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Handling</b></td>
+                    <td class="highlight" align="RIGHT">&HAND& </td>
+                  </tr>
+
+                  <tr>
+                    <td class="highlight"><b>Discount</b></td>
+                    <td class="highlight" align="RIGHT">&WEB.DISC& </td>
+                  </tr>
+
+                  &FET.TOL&
+
+                  <tr>
+                    <td class="items"><b>Order Total</b></td>
+                    <td class="items" align="RIGHT">&OTOT& </td>
+                  </tr>
+                </table>
+              </td>
+<!--/SUBMIT-->
+            </tr>
+            <tr>
+              <td colspan=2 align=center><img src="/WOEB/images/printerfriendly_white.gif" height=32 alt="" border=0><a href="javascript:var new_window=window.open('/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.PRINT&DISP.ID=WEBDISP.WOE.ORDER.SUBMIT&TRACKNO=&TRK&','Printer','resizable,scrollbars,width=640,height=640')">Click here for a printer friendly version of this page</a></td>
+            </tr>
+
+            <tr>
+              <td align="center" colspan="2"><br>
+              <script language="javascript">
+              function jump(value)
+              {
+                location.href=value
+              }
+              </script>
+
+              <form><input type="button" value="Start New Order" OnClick="jump('/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&')">
+              </form></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

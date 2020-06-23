@@ -1,0 +1,72 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:14am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.AR.CASH -- A/R Cash **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=&TYPE.PROCID&">&nbsp;&TYPE&</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;View Cash Receipts</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%><br>
+          <table border=0 cellpadding=2 cellspacing=0 width=100%>
+            <tr>
+              <td class="leftnav"><b>Customer:</b></td>
+              <td class="leftnav" colspan=4>&NAME& </td>
+              <td class="leftnav"><b>Phone:</b></td>
+              <td class="leftnav" colspan=3>&PHONE& </td>
+            </tr>
+
+            <tr>
+              <td><b>Check #:</b></td>
+              <td colspan=2>&CHECKNO& </td>
+              <td><b>Date:</b></td>
+              <td align=center>&POST& </td>
+              <td><b>Amount:</b></td>
+              <td align=right>&AMT& </td>
+              <td><b>Unapplied:</b></td>
+              <td align=right>&UNAPP& </td>
+            </tr>
+
+            <tr>
+              <td colspan=9><br></td>
+            </tr>
+
+            <tr>
+              <td class="leftnav" colspan=2><b>Invoice</b></td>
+              <td class="leftnav" colspan=2><b>Date</b></td>
+              <td class="leftnav" align="right"><b>Open Amount</b></td>
+              <td class="leftnav" align="right"><b>Discount</b></td>
+              <td class="leftnav" align="right"><b>Amt Applied</b></td>
+              <td class="leftnav" colspan=2 align="right"><b>Balance</b></td>
+            </tr>
+&CR.LOOP.BEG&
+            <tr>
+              <td colspan=2>&INVOICE& </td>
+              <td colspan=2>&DATE& </td>
+              <td align=right>&OPEN& </td>
+              <td align=right>&DISC& </td>
+              <td align=right>&APP& </td>
+              <td align=right colspan=2>&BALANCE& </td>
+            </tr>
+&CR.LOOP.END&
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

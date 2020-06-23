@@ -1,0 +1,116 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:12am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.NEW.ACCT -- New Account **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Create a New Account</a></td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100% align="center">
+        <form action="/eserv/eclipse.ecl" method="POST" name=newform>
+        <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.NEW.ACCT">
+        <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+        <input type="HIDDEN" name="CN" value="&CN&">
+          <table border="0" cellpadding="0" cellspacing="3">
+            <tr>
+              <td colspan=2><br>
+              <b>Please fill in your account information</b></td>
+            </tr>
+
+            <tr>
+              <td><br><b>*Company Name</b></td>
+              <td><br><input type="text" name="CONAME" size="25" value="&CONAME&" maxlength="35"></td>
+            </tr>
+
+            <tr>
+              <td><b>*First Name</b></td>
+              <td><input type="text" name="FIRSTNAME" size="25" value="&FIRSTNAME&" maxlength="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Last Name</b></td>
+              <td><input type="text" name="LASTNAME" size="25" value="&LASTNAME&" maxlength="25"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Address 1</b></td>
+              <td><input type="text" name="ADDR1" size="25" value="&ADDR1&"  maxlength="35"></td>
+            </tr>
+
+            <tr>
+              <td><b>&nbsp;Address 2</b></td>
+              <td><input type="text" name="ADDR2" size="25" value="&ADDR2&" maxlength="35"></td>
+            </tr>
+
+            <tr>
+              <td><b>*City</b></td>
+              <td><input type="text" name="CITY" size="25" value="&CITY&" maxlength="35"></td>
+            </tr>
+
+            <tr>
+              <td><b>*State</b></td>
+              <td><input type="text" name="ST" size="2" value="&ST&" maxlength="2"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Zip</b></td>
+              <td><input type="text" name="ZIP" size="10" value="&ZIP&"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Phone</b></td>
+              <td><input type="text" name="PHONE" size="16" value="&PHONE&" maxlength="20"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Email Address</b></td>
+              <td><input type="text" name="EMAIL" size="25" value="&EMAIL&" maxlength="53"></td>
+            </tr>
+
+            <tr>
+              <td align="center" colspan=2><br><input type="SUBMIT" value="Continue"></td>
+            </tr>
+
+            <tr>
+              <td colspan=2><hr>
+            </tr>
+
+            <tr>
+              <td colspan=2><br>
+              <b>If you already have an account, please enter your login and password.</b></td>
+            </tr>
+
+            <tr>
+              <td><b>Login</b></td>
+              <td><input type="text" name="D1" size="15" value=""></td>
+            </tr>
+
+            <tr>
+              <td><b>Password</b></td>
+              <td><input type="Password" name="D2" size="15" value=""></td>
+            </tr>
+
+            <tr>
+              <td colspan=2 align="center"><br><input type="submit" name="LOGIN" value="Login"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

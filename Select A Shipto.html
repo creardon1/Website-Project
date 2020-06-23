@@ -1,0 +1,133 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:51am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.SELECT.ST -- Select a Shipto **-->
+<html>
+<head>
+<title>Select a Ship-To</title>
+<link href="/WOEB/css/woe.css" rel=stylesheet>
+</head>
+
+<body leftmargin=0 rightmargin=0 topmargin=0 bottommargin=0 marginheight=0 marginwidth=0>
+
+<form method=post action="/eserv/eclipse.ecl">
+<input type="hidden" name="PROCID" value="WEBPROC.WOE.SELECT.ST">
+<input type="hidden" name="TRACKNO" value="&TRK&">
+<input type="hidden" name="SORTORDER" value="&SORTORDER&">
+<input type="hidden" name="D1" value="&D1&">
+
+<table border=0 cellpadding=0 cellspacing=0 width=720>
+  <tr>
+    <td colspan=4 width=720><img src="/WOEB/images/ghost_top.gif" width=720 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td width=150 valign=top><img src="/WOEB/images/ghost_left.gif" width=150 height=600 border=0 alt=""></td>
+    <td class="darkline" width=1><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+    <td class="leftnav" valign="top" width=568>
+      <table border=0 cellpadding=0 cellspacing=0 width=100%>
+        <tr>
+          <td><img src="/WOEB/images/spacer.gif" width=568 height=1 border=0 alt=""></td>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="0" cellpadding="3" cellspacing="0" width=100%>
+              <tr>
+                <td class="breadcrumbrow"><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Choose a Shipping Address</td>
+              </tr>
+
+              <tr>
+                <td class="highlight" width="100%">&nbsp;<b>&BT.NAME& </b></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><br>Please select a shipping address from your address book&NEW.ST.LINK&<br>&nbsp;</td>
+              </tr>
+
+              <tr valign="top">
+                <td class="ghost">
+                Enter text here to search for a specific Shipping Address
+                <br>
+                <input type="Text" name="SEARCH" value="&SEARCHSTR&">
+                &nbsp;
+                <select name="STYPE">
+                <option value="NAME"&SELNAME&>Name
+                <option value="ADDRESS"&SELADDRESS&>Address
+                <option value="CITY"&SELCITY&>City
+                <option value="STATE"&SELSTATE&>State
+                <option value="ZIP"&SELZIP&>Zip
+                </select>
+                &nbsp;
+                <input type="Submit" name="SEARCHBTN" value="Search">
+                &SEARCHERR&
+                </td>
+              </tr>
+              &STPAGES&
+            </table>
+
+            <table border="0" cellpadding="2" cellspacing="0" width="100%">
+              <tr>
+                <td class="ghost" colspan=6 align=center>
+                <br><b>Click Column Heading to sort</b>
+                </td>
+              </tr>
+
+              <tr valign="bottom">
+                <td class="highlight">&nbsp;</td>
+                <td class="highlight">&NAME.LINK&</td>
+                <td class="highlight">&ADDR.LINK&</td>
+                <td class="highlight">&CITY.LINK&</td>
+                <td class="highlight">&STATE.LINK&</td>
+                <td class="highlight">&ZIP.LINK&</td>
+              </tr>
+&ADDR.LOOP.BEG&
+              <tr valign="top">
+                <td class="ghost">
+                <input type="image" src="/WOEB/images/shiptogo.gif" border=0 name="SEL.ADDR:&ADDR.NO&">&ED.THIS.BTN&</td>
+                <td class="ghost">
+                &NAME&
+                </td>
+                <td class="ghost">
+                &ADDR&
+                </td>
+                <td class="ghost">
+                &CITY&
+                </td>
+                <td class="ghost">
+                &STATE&
+                </td>
+                <td class="ghost">
+                &ZIP&
+                </td>
+              </tr>
+&ADDR.LOOP.END&
+            </table>
+
+            <table border="0" cellpadding="3" cellspacing="0" width=100%>
+              &STPAGES&
+              <tr>
+                <td width="100%">&NEW.ST.RESP&</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td width=100%><img src="/WOEB/images/spacer.gif" width=568 height=1 border=0 alt=""></td>
+        </tr>
+      </table>
+    </td>
+    <td class="darkline" width=1><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td width=150><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+    <td colspan=3 width=570><img src="/WOEB/images/spacer.gif" width=570 height=1 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan=4><img src="/WOEB/images/ghost_bottom.gif" width=720 height=25 border=0 alt=""></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

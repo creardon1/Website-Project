@@ -1,0 +1,88 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:06am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.BID.REVIEW -- Modify Bids Review Page **-->
+<td width="100%" valign="top">
+    <table border="0" cellpadding="3" cellspacing="0" width="100%">
+      <tr>
+        <td class="breadcrumbrow" height="22"><img src="/WOEB/images/triangle.gif" width="10" height="9" border="0" alt="">&nbsp;Modified Bid Review</a></td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width="560"><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%><br>
+        <form action="/eserv/eclipse.ecl" method="POST">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.BID.REV">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td class="bodytextlink">&ORD.MSG&</td>
+              <td align="right"><b>Required Date: </b>&REQDT&</td>
+            </tr>
+
+            <tr>
+              <td colspan="2" class="highlight" align="center"><b>&ITEM.CT& on Bid</b></td>
+            </tr>
+          </table>
+
+          <table border="0" cellspacing="0" cellpadding="1" width="100%">
+            <tr>
+              <td valign="bottom" width="1"><b>Qty</b></td>
+              <td valign="bottom" align="center"><b>Unit of<br>Measure</b></td>
+              <td valign="bottom"><b>Item Description</b></td>
+              &LIC.HDR&
+              &ADDL.HDR&
+              <td valign="bottom" align="right"><b>Ext Price</b></td>
+            </tr>
+&PN.LOOP.BEG&
+            <tr>
+              <td width="1" valign="top">
+                <input type="hidden" name="&PNX&" value="&PN&">
+                <input type="text" name="&QTX&" value="&QTY&" size="4">
+              </td>
+              <td align="center" valign="top">&SUOM&</td>
+              <td valign="top">&DESC&</td>
+              &LIC.TD&
+              &ADDL.INFO&
+              <td valign="top" align="right" nowrap>&EXT&</td>
+            </tr>
+&PN.LOOP.END&
+            <tr>
+              <td colspan="&SUB.SPAN&">&nbsp;</td>
+              <td><b>Subtotal</b></td>
+              <td align="RIGHT"><b>&SUB.TOL&</b></td>
+            </tr>
+          </table>
+
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td align="center"><b>&NS.MSG&</b></td>
+            </tr>
+            <tr>
+              <td align="center"><br>
+              <b>Comments</b><br>
+              <textarea name="GET.CMT" rows="4" cols="60" wrap="VIRTUAL">&SHOW.CMT&</textarea></td>
+            </tr>
+
+            <tr>
+              <td align="center"><br>
+              <input type="submit" name="UPDATE" value="Update">
+              <input type="submit" name="STANDARD" value="Submit"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

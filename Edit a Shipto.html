@@ -1,0 +1,111 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 09:21am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.EDIT.ST -- Edit a Shipto **-->
+<html>
+<head>
+<title>Edit a Ship-To</title>
+<link href="/WOEB/css/woe.css" rel=stylesheet>
+</head>
+
+<body leftmargin=0 rightmargin=0 topmargin=0 bottommargin=0 marginheight=0 marginwidth=0>
+<form action="/eserv/eclipse.ecl" method="POST">
+<input type="hidden" name="PROCID" value="WEBPROC.WOE.EDIT.ST">
+<input type="hidden" name="TRACKNO" value="&TRK&">
+<input type="hidden" name="D1" value="&D1&">
+<input type="hidden" name="CN" value="&CN&">
+<table border=0 cellpadding=0 cellspacing=0 width=720>
+  <tr>
+    <td colspan=4 width=720><img src="/WOEB/images/ghost_top.gif" width=720 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td width=150><img src="/WOEB/images/ghost_left.gif" width=150 height=600 border=0 alt=""></td>
+    <td class="darkline" width=1><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+    <td class="leftnav" valign="top" width=568>
+      <table border=0 cellpadding=0 cellspacing=0 width=100%>
+        <tr>
+          <td><img src="/WOEB/images/spacer.gif" width=568 height=1 border=0 alt=""></td>
+        </tr>
+
+        <tr>
+          <td>
+            <table border="0" cellpadding="3" cellspacing="0" width=100%>
+              <tr>
+                <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.SELECT.ST&D1=&D1&&VER=B&TRACKNO=&TRK&">&nbsp;Choose a Shipping Address</a>
+                <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;&ITEXT&</a>
+              </tr>
+
+              <tr>
+                <td class="highlight">&nbsp;<b>&PASSER& </b></td>
+              </tr>
+            </table>
+
+            <table border="0" cellpadding="2" cellspacing="0" align="center">
+              <tr>
+                <td class="ghost"><br><b>*Name: </b></td>
+                <td><br><input type="text" name="NAME" size=30 value="&NAME&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>*Address 1: </b></td>
+                <td><input type="text" name="ADDR1" size=30 value="&ADDR1&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>&nbsp;Address 2: </b></td>
+                <td><input type="text" name="ADDR2" size=30 value="&ADDR2&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>*City: </b></td>
+                <td><input type="text" name="CITY" size=20 value="&CITY&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>*State: </b></td>
+                <td><input type="text" name="STATE" size=2 value="&STATE&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>*Zip Code: </b></td>
+                <td><input type="text" name="ZIP" size=10 value="&ZIP&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>&nbsp;Country: </b></td>
+                <td><input type="text" name="COUNTRY" size=20 value="&COUNTRY&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost"><b>*Phone: </b></td>
+                <td><input type="text" name="PHONE" size=30 value="&PHONE&"></td>
+              </tr>
+
+              <tr>
+                <td class="ghost" valign="top"><b>&nbsp;Special Instructions: </b></td>
+                <td><textarea rows=4 cols=23 name="SHIPINFO">&SHIPINFO& </textarea></td>
+              </tr>
+
+              <tr>
+                <td>&nbsp;</td>
+                <td align="center" colspan=2><br>&ITYPE&</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td class="darkline" width=1><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td width=150><img src="/WOEB/images/spacer.gif" width=1 height=1 border=0 alt=""></td>
+    <td colspan=3 width=570><img src="/WOEB/images/spacer.gif" width=570 height=1 border=0 alt=""></td>
+  </tr>
+
+  <tr>
+    <td colspan=4><img src="/WOEB/images/ghost_bottom.gif" width=720 height=25 border=0 alt=""></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

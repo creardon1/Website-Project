@@ -1,0 +1,93 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 09:55am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.ORD.SEARCH -- Advanced Search **-->
+<td width=100% valign="top">
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/woeb.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("calendar");</SCRIPT>
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Advanced Search</td>
+      </tr>
+
+      <tr>
+        <td class="items">&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td colspan=2 class="bodytext" width=100%>
+        <form name="Orders" action="/eserv/eclipse.ecl" method="POST">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOEB.ORD.SEARCH">
+        <input type="hidden" name="STATUS" value="SEARCH">
+        <input type="hidden" name="TYPE" value="&ACT.TYPE&">
+        <input type="hidden" name="ADVANCED" value="1">
+            <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+               <td><input type="Checkbox" name="OPEN.ORDERS"> Open Orders</td>
+               <td><input type="Checkbox" name="BIDS"> Bids</td>
+               <td><input type="Checkbox" name="ORDER.HISTORY"> Order History&PASSREQ&</td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                 <table border=0 cellpadding=2 cellspacing=2 width=100%>
+                 <tr>
+                    <td><b>From:&nbsp;</b></td>
+                    <td><b>To:&nbsp;</b></td>
+                    <td valign="middle" rowspan="3">&nbsp;</td>
+                 </tr>
+                 <tr>
+                    <td><input type=text name="STDT" value="&STDT&" maxlength=10 size=10>&nbsp;<a href="#"onClick="cal1x.select(document.Orders.STDT,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+                    <td><input type=text name="ENDDT" value="&ENDDT&" maxlengty=10 size=10>&nbsp;<a href="#" onClick="cal1x.select(document.Orders.ENDDT,'anchor2x','MM/dd/yyyy'); return false;" NAME="anchor2x" ID="anchor2x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+                 </tr>
+                 <tr>
+                    <td>(mm/dd/yyyy)&nbsp;</td>
+                    <td>(mm/dd/yyyy)&nbsp;</td>
+                 </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td colspan="3">&nbsp;</td></tr>
+             <tr>
+                <td colspan="3">
+                  <table border=0 cellpadding=2 cellspacing=2 width=100%>
+                    <tr>
+                <td><input type="Checkbox" name="REF.NO"> Reference Number</td>
+                <td><input type="Checkbox" name="CUS.PN"> My Part Number</td>
+             </tr>
+             <tr>
+                <td><input type="Checkbox" name="PO.NO"> PO Number</td>
+                <td><input type="Checkbox" name="MAN.CAT"> Manufacturer Catalog Number</td>
+             </tr>
+             <tr>
+                <td><input type="Checkbox" name="REL.NO"> Release Number</td>
+                <td><input type="Checkbox" name="PRD.DESC"> Product Description</td>
+             </tr>
+                 </table>
+               </td>
+             </tr>
+             <tr><td colspan="3">&nbsp;</td></tr>
+             <tr>
+                <td colspan="3">
+                  <b>Advanced Order Search</b><br>
+                  <input type="Text" name="WORDS">
+                  <input type="submit" value="Search">
+                </td>
+             </tr>
+           </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+    <DIV ID="calendar" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

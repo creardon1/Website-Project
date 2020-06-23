@@ -1,0 +1,93 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:27am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.PRINT.INV -- Print Invoices **-->
+<td width=100% valign="top">
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("testdiv1");</SCRIPT>
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Print Invoices</td>
+      </tr>
+
+      <tr>
+        <td class="items">
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&ACCT.TYPE.MSG&</td>
+              <td class="items" align="right"><a href="/WOEB/help/printinvoices.html" onclick="openUp(this.href);return false;">Printing Invoices Help <img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+          <SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
+          function validate(form)
+          {
+            if (!form.SD.value || !form.ED.value)
+            {
+              alert("You must fill in both the Start and End Dates");
+              return false;
+            }
+            else
+            {
+              return true;
+            }
+          }
+          </SCRIPT>
+
+          <form action="/eserv/eclipse.ecl" method="POST" name="form" onSubmit="javascript:return validate(this);">
+          <input type="hidden" name="PROCID" value="WEBPROC.WOE.PRINT.INV">
+          <input type="hidden" name="TRACKNO" value="&TRK&">
+          <input type="hidden" name="TYPE" value="&ACT.TYPE&">
+
+          <table border=0 cellpadding=0 cellspacing=0 width=100%>
+            <tr>
+              <td class="error">&PASSER&</td>
+            </tr>
+
+            <tr>
+              <td><br>Please enter a date range.<br><b>Note:</b> It may take a few minutes to display your invoices, please do not click the <b>Back</b> or <b>Reload</b> buttons.</td>
+            </tr>
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td>From (mm/dd/yyyy)&nbsp;<input type=text name="SD" value="&SD&" maxlength=10 size=10>&nbsp;
+              <a href="#" onClick="cal1x.select(document.form.SD,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+              <td>To (mm/dd/yyyy)&nbsp;<input type=text name="ED" value="&ED&" maxlength=10 size=10>&nbsp;
+              <a href="#" onClick="cal1x.select(document.form.ED,'anchor2x','MM/dd/yyyy'); return false;" NAME="anchor2x" ID="anchor2x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+              <td><input type="submit" value="Go"></td>
+            </tr>
+
+            <tr>
+              <td colspan=3 align="center">&PRINTER&</td>
+            </tr>
+
+          </table>
+
+          <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+
+          <table border=0 cellpadding=0 cellspacing=0 width=100%>
+&INV.LOOP.BEG&
+            <tr>
+              <td align="center">&INV.DATA&</td>
+            </tr>
+&INV.LOOP.END&
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

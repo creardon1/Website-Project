@@ -1,0 +1,82 @@
+<!--** CUS.FORM Version# 2 - 23/06/2020 - 09:13am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.CREATE.NS -- Create Non-stock **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Enter new product info</td>
+      </tr>
+
+      <tr>
+        <td class="items">&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" valign="top">
+          <table border=0 cellpadding=3 cellspacing=0>
+            <tr>
+              <td colspan=2 class="bodytext">&UPC.FOUND&</td>
+            </tr>
+
+            <form action="/eserv/eclipse.ecl" method="POST">
+            <input type="hidden" name="PROCID" value="WEBPROC.WOE.CREATE.NS">
+            <input type="hidden" name="TRACKNO" value="&TRK&">
+            <tr>
+              <td><b>*Quantity Needed:</b></td>
+              <td><input type="text" size=5 name="QTY" value="&QTY&"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Price Range:</b></td>
+              <td><select name=PRICE>&PRICE&</select></td>
+            </tr>
+
+            <tr>
+              <td><b>UPC #:</b></td>
+              <td><input type="text" size=18 name="UPC.NUM" value="&UPC.NUM&"></td>
+            </tr>
+
+            <tr>
+              <td><b>Model Number:</b></td>
+              <td><input type="text" size=18 name="CAT.NUM" value="&CAT.NUM&"></td>
+            </tr>
+
+            <tr>
+              <td><b>*Industry:</b></td>
+              <td>&IND.INFO&</td>
+            </tr>
+
+            <tr>
+              <td><b>*Manufacturer:</b></td>
+              <td><input type="text" size=40 name="MANUFACT" value="&MANUFACT&"></td>
+            </tr>
+
+            <tr>
+              <td valign=top><b>*Description:</b></td>
+              <td valign=top><textarea name="DESC" rows="3" cols="40">&DESC&</textarea></td>
+            </tr>
+
+            <tr>
+              <td valign=top><b>Additional Comments:</b></td>
+              <td valign=top><textarea name="ADDL" rows="3" cols="40">&ADDL&</textarea></td>
+            </tr>
+
+            <tr>
+              <td>&nbsp;</td>
+              <td align="center"><input type="submit" value="Continue"></td>
+            </tr>
+            </form>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

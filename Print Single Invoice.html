@@ -1,0 +1,126 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:29am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOE.PRINT.SINGLE.INV -- Print Single Invoice **-->
+<table border="0" cellpadding="0" cellspacing="0" width="560">
+    <tr>
+      <td align="center" valign="top"><br>
+        <table border="0" cellpadding="0" cellspacing="0" width=100%>
+          <tr>
+            <td><font size="+2">&OID&.&INVN&</font></td>
+          </tr>
+  
+          <tr>
+            <td align="center">
+              <table border="1" cellpadding="1" cellspacing="0" width=100%>
+                <tr>
+                  <td><b>Shipping Address:</b></td>
+                  <td><b>Billing Address:</b></td>
+                </tr>
+  
+                <tr>
+                  <td>
+                  &ST.NAME& <br>
+                  &ST.ADD1& <br>
+                  &ST.ADD2& <br>
+                  &ST.CITY& &ST.ST& &ST.ZIP& </td>
+                  <td>
+                  &BT.NAME& <br>
+                  &BT.ADD1& <br>
+                  &BT.ADD2& <br>
+                  &BT.CITY& &BT.ST& &BT.ZIP& </td>
+                </tr>
+  
+                <tr>
+                  <td valign="top"><b>Shipping Instructions:</b>&SHIP.INS& </td>
+                  <td align=left rowspan=2 colspan=2>
+                    <table width=100% cellpadding=0 cellspacing=0>
+                      <tr>
+                        <td><b>Order Date:</b></td>
+                        <td align="right">&ORD.DATE& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>Ship Date:</b></td>
+                        <td align="right">&SHIP.DT& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>Ship Via:</b></td>
+                        <td align="right">&SHIPVIA& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>Ordered By:</b></td>
+                        <td align="right">&ORD.BY& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>Phone #:</b></td>
+                        <td align="right">&PHONE& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>PO #:</b></td>
+                        <td align="right">&PO.NUM& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>Release #:</b></td>
+                        <td align="right">&REL.NUM& </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+  
+              <table border="1" cellpadding="1" cellspacing="0" width=100%>
+                <tr>
+                  <td align="center"><b>Qty</b></td>
+                  <td align="center"><b>Item Description</b></td>
+                  <td align="center"><b>Your Price</b></td>
+                  <td align="center"><b>Ext Price</b></td>
+                </tr>
+  &PN.LOOP.BEG&
+                <tr>
+                  <td align="center">&QTY& </td>
+                  <td>&DESC& <i>&LIC& </i> </td>
+                  <td align="right">&CPRC& </td>
+                  <td align="right">&EXT& </td>
+                </tr>
+  &PN.LOOP.END&
+                <tr>
+                  <td colspan=2 rowspan=6><br><br><br><br>&TERMS.D& <br><br></td>
+                  <td><b>Subtotal</b></td>
+                  <td align="RIGHT">&SUBTOL& </td>
+                </tr>
+  
+                <tr>
+                  <td><b>Tax</b></td>
+                  <td align="RIGHT">&TAX& </td>
+                </tr>
+  
+                <tr>
+                  <td><b>Freight</b></td>
+                  <td align="RIGHT">&FREIGHT& </td>
+                </tr>
+  
+                <tr>
+                  <td><b>Handling</b></td>
+                  <td align="RIGHT">&HAND& </td>
+                </tr>
+  
+                <tr>
+                  <td><b>Discount</b></td>
+                  <td align="RIGHT">&DISC& </td>
+                </tr>
+  
+                <tr>
+                  <td><b>Order Total</b></td>
+                  <td align="RIGHT">&OTOT& </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>

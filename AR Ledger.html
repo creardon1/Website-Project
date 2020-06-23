@@ -1,0 +1,93 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:19am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.AR.LEDGER -- A/R Ledger **-->
+<td width=100% valign="top">
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("testdiv1");</SCRIPT>
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow"><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Order History</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&ACCT.TYPE.MSG&</td>
+              <td class="items" align="right"><a href="/WOEB/help/orderhistory.html" onclick="openUp(this.href);return false;">Order History Help <img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" name="OrderHistory" method="post">
+        <input type="hidden" name="TRACKNO" value=&TRK&>
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.AR.LEDGER">
+        <input type ="hidden" name="TYPE" value="&ACT.TYPE&">
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td><b>Customer:</b> &NAME& </td>
+              <td><b>Phone:</b> &PHONE& </td>
+            </tr>
+
+            <tr>
+              <td colspan=2><b>Address:</b> &ADDR& </td>
+            </tr>
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td>From (mm/dd/yyyy)&nbsp;<input type=text name="STDT" value="&DISP.ST.DT&" maxlength=10 size=10>&nbsp;<a href="#"onClick="cal1x.select(document.OrderHistory.STDT,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+              <td>To (mm/dd/yyyy)&nbsp;<input type=text name="ENDDT" value="&DISP.END.DT&" maxlengty=10 size=10>&nbsp;<a href="#" onClick="cal1x.select(document.OrderHistory.ENDDT,'anchor2x','MM/dd/yyyy'); return false;" NAME="anchor2x" ID="anchor2x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+              <td><input type=image src="/WOEB/images/GetTrans.gif" border=0></td>
+            </tr>
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+
+            <tr>
+              <td class="items" width=100% colspan="&COLS&">
+                &ITEM.HTML&
+              </td>
+            </tr>
+
+&TABLE.HEADER&
+
+&AR.LOOP.BEG&
+            <tr>
+              <td>&LINE.DATA& </td>
+              <td align=center>&BR& </td>
+              <td align=center>&POST.DT& </td>
+              <td>&DESC& </td>
+              <td align=right>&DEBIT& </td>
+              <td align=right>&CREDIT& </td>
+              &AUDIT.LINK&
+            </tr>
+&AR.LOOP.END&
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td class=leftnav><a class="leftnavlink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&DISP.ID=WEBDISP.WOEB.ORD.SEARCH&TYPE=&ACT.TYPE&&TRACKNO=&TRK&">Advanced Search</a>&nbsp;&nbsp;&nbsp; <b>Or you can search by Reference # or PO # or Release # :</b></td>
+              <td class=leftnav align=right>&nbsp;
+              <input type=text name="WORDS" size="15">&nbsp;<input type=image src="/WOEB/images/go.gif" border=0 align=absmiddle></td>
+            </tr>
+          </table>
+        </form>
+        <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

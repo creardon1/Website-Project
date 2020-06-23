@@ -1,0 +1,59 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:34am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.GROUP.MAINT -- Product Groups Maintenance **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;My Product Groups</a></td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&PASSER&</td>
+              <td class="items" align="right"><a href="/WOEB/help/add2ProductGroups.html" onclick="openUp(this.href);return false;">Product Groups Help <img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%><br><b>To add items to a group:</b>
+        <ul>
+        <li>Search for an item using the above search box OR select a product category to the left and follow the drill-down path.<li>Once you have found the item(s) that you want to add, select the checkbox(s) and click Add Checked Items to My Product Groups.<li>Your selected items will be automatically added once you choose a group.</ul>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" method="POST">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.GROUP.MAINT">
+        <input type="hidden" name="SEL.ITEMS" value="&SEL.ITEMS&">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+          <table border="0" cellpadding="3" cellspacing="0">
+&GRP.LOOP.BEG&
+            &GROUP&
+&GRP.LOOP.END&
+            &VIEW.ALL&
+            &VIEW.NEW&
+            <tr>
+              <td align="center" colspan=2><br>
+              <input type="submit" name="CONTINUE" value="Continue">&nbsp;
+              <input type="submit" name="DELETE" value="Delete"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

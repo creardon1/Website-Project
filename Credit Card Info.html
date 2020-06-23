@@ -1,0 +1,70 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 09:16am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.CC.EDIT -- Credit Card Edit **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.DISP.OPTS&TRACKNO=&TRK&">&nbsp;My Settings</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.CC.MAINT&TRACKNO=&TRK&">&nbsp;Credit Card Maintenance</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Update Credit Card</td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" method="POST">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.CC.EDIT">
+        <input type="hidden" name="CCNO" value="&CCNO&">
+        <input type="hidden" name="CC.POS" value="&CC.POS&">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        &CHKOUT&
+          <table border=0 cellpadding=3 cellspacing=1>
+            <tr>
+              <td><b>Credit Card Type:</b></td>
+              <td>&CCTYPE&</td>
+            </tr>
+
+            <tr>
+              <td><b>Credit Card Number:</b></td>
+              <td>&HIDE.CCNO&</td>
+            </tr>
+
+            <tr>
+              <td><b>Exp Date:</b></td>
+              <td><select name="EXP.MONTH">&EXP.MONTHS&</select>
+              <select name="EXP.YEAR">&EXP.YEARS&</select></td>
+            </tr>
+
+            <tr>
+              <td><b>Name on Card:</b></td>
+              <td><input type=text size=25 name=CCNAME value="&CCNAME&"></td>
+            </tr>
+
+            <tr>
+              <td><b>Billing Zip:</b></td>
+              <td><input type=text size=10 name=CCZIP value="&CCZIP&"></td>
+            </tr>
+
+            <tr>
+              <td><br>&nbsp;</td>
+              <td><br><input type=submit value="Save Changes"></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

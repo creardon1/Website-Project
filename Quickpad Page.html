@@ -1,0 +1,251 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:39am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.QUICKPAD -- Quickpad Page **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td colspan=2 class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Quick Pad</a></td>
+      </tr>
+
+      <tr>
+        <td colspan=2 class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td colspan=2 width="560"><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td valign="top" class="bodytext" width=100% border=1><br>
+
+          <script>
+          $(function() {
+            $("#tabs").tabs({
+              selected: &QP.TAB.INDEX&,
+              select: function(event,ui) {
+                $("#passerRow").html("<i>Ordering just got a whole lot easier</i>").removeClass("error");
+              }
+            });
+          });
+          </script>
+
+          <style type="text/css">
+            .quickPadTab:hover
+            {
+              background-color: gray;
+            }
+          </style>
+
+          <div id="tabs"> <!-- begin tabs -->
+            <ul>
+              <li><a href="#tab1" class="quickPadTab">Part# Entry</a></li>
+              <li><a href="#tab2" class="quickPadTab">Copy &amp; Paste</a></li>
+              <li><a href="#tab3" class="quickPadTab">File Upload</a></li>
+            </ul>
+
+            <div id="tab1"> <!-- begin tab1 -->
+              <table cellspacing="0" cellpadding="3" border="0">
+                <tr>
+                  <td valign="top" class="bodytext" width=50%><br>
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td><b>Know exactly what you want? Enter the item numbers here.</b></td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Simply enter the item numbers of the products and the quantities you want to purchase in the fields to the right and click Continue.</td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Once the Continue button is clicked, a summary page will report the following: <ul><li>Items that find an exact match will be automatically placed into your shopping cart<li>Items that find multiple matches will display all results found<li>Items that find 0 matches will display a <i>Search Again</i> option.</ul></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td class="bodytext" width=50%>
+                    <form action="/eserv/eclipse.ecl" method="POST">
+                    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MAIN">
+                    <input type="hidden" name="TRACKNO" value="&TRK&">
+                    <input type="hidden" name="quickPadTabIndex" value="0">
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td align="center"><b>Product</b></td>
+                        <td align="center"><b>Quantity</b></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN1" size="25" value="&WORDS1&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY1" size="4" value="&QTY1&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN2" size="25" value="&WORDS2&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY2" size="4" value="&QTY2&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN3" size="25" value="&WORDS3&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY3" size="4" value="&QTY3&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN4" size="25" value="&WORDS4&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY4" size="4" value="&QTY4&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN5" size="25" value="&WORDS5&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY5" size="4" value="&QTY5&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN6" size="25" value="&WORDS6&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY6" size="4" value="&QTY6&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN7" size="25" value="&WORDS7&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY7" size="4" value="&QTY7&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN8" size="25" value="&WORDS8&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY8" size="4" value="&QTY8&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN9" size="25" value="&WORDS9&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY9" size="4" value="&QTY9&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="50%">
+                        <input type="text" name="PN10" size="25" value="&WORDS10&"></td>
+                        <td align="center" width="50%">
+                        <input type="text" name="QTY10" size="4" value="&QTY10&"></td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="100%">
+                        <input type=submit name=CONTINUE value="Continue"></td>
+                      </tr>
+                    </table>
+                    </form>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- end tab1 -->
+
+            <div id="tab2"> <!-- begin tab2 -->
+              <table cellspacing="0" cellpadding="3" border="0">
+                <tr>
+                  <td valign="top" class="bodytext" width=50%><br>
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td><b>Copy &amp; Paste the Qty's and Part#'s directly from a file.</b></td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Simply copy the Qty and Part# columns from a file (spreadsheet, word doc, text file etc), paste into the textbox to the right and click Continue.</td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Once the Continue button is clicked, a summary page will report the following: <ul><li>Items that find an exact match will be automatically placed into your shopping cart<li>Items that find multiple matches will display all results found<li>Items that find 0 matches will display a <i>Search Again</i> option.</ul></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td class="bodytext" width=50% valign="top">
+                    <form action="/eserv/eclipse.ecl" method="POST">
+                    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MAIN">
+                    <input type="hidden" name="TRACKNO" value="&TRK&">
+                    <input type="hidden" name="quickPadTabIndex" value="1">
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td>
+                        <br>You can copy &amp; paste up to &QP.LI.LIMIT& line items at a time.
+                        <p>Enter one item per line:
+                        <br><b>Qty</b> [COMMA or TAB] <b>Part#</b>
+                        <textarea cols="10" rows="10" name="quickPadItemList" style="width: 250px; height: 200px;" title="Copy and Paste"></textarea>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td align="center" width="100%">
+                        <input type=submit name=CONTINUE value="Continue"></td>
+                      </tr>
+                    </table>
+                    </form>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- end tab2 -->
+
+            <div id="tab3"> <!-- begin tab3 -->
+              <table cellspacing="0" cellpadding="3" border="0">
+                <tr>
+                  <td valign="top" class="bodytext" width=50%><br>
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td><b>File Upload from a comma delimited file.</b></td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Simply upload a comma delimited file and click Continue.  <p>Comma delimited file must have a .csv extension</td>
+                      </tr>
+
+                      <tr>
+                        <td><br>Once the Continue button is clicked, a summary page will report the following: <ul><li>Items that find an exact match will be automatically placed into your shopping cart<li>Items that find multiple matches will display all results found<li>Items that find 0 matches will display a <i>Search Again</i> option.</ul></td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <td class="bodytext" width=50% valign="top">
+                    <form action="/eserv/eclipse.ecl" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MAIN">
+                    <input type="hidden" name="TRACKNO" value="&TRK&">
+                    <input type="hidden" name="quickPadTabIndex" value="2">
+                    <table cellspacing="0" cellpadding="3" border="0" width=100%>
+                      <tr>
+                        <td>
+                        <br>Comma delimited file can contain up to &QP.LI.LIMIT& line items.
+                        <p>Comma delimited file formatting must be:
+                        <br><b>Qty</b> [COMMA] <b>Part#</b>
+                        <input type="file" name="quickPadItemList" size="20">
+                        <p><input type="submit" value="Continue">
+                        </td>
+                      </tr>
+                    </table>
+                    </form>
+                  </td>
+                </tr>
+              </table>
+            </div> <!-- end tab3 -->
+          </div> <!-- end tabs -->
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

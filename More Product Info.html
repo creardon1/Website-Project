@@ -1,0 +1,84 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:09am - REACOL -->
+<form method=post action="/eserv/eclipse.ecl">
+    <input type="hidden" name="PROCID" value="WEBPROC.WOEB.MORE.INFO">
+    <input type="hidden" name="TRACKNO" value="&TRK&">
+    <input type="hidden" name="PN" value="&PN&">
+    <input type="hidden" name="UOM" value="&UOM&">
+    <input type="hidden" name="VAVAIL" value="&VAVAIL&">
+    <input type="hidden" name="VCUST" value="&VCUST&">
+    <input type="hidden" name="VTECH" value="&VTECH&">
+    <input type="hidden" name="CLEV" value="&CLEV&">
+    <input type="hidden" name="PLEV" value="&PLEV&">
+    <input type="hidden" name="QLEV" value="&QLEV&">
+    <input type="hidden" name="ITEM.NO" value="&ITEM.NO&">
+    <input type="hidden" name="PN.CT" value="&PN.CT&">
+    &ID.STRING&
+    &BANNER.ID.INPUT&
+    
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td align="center" valign="top" width=100%>
+          <table border="0" cellpadding="3" cellspacing="1" width=100%>
+            <tr>
+              <td><b>Product Description</b>
+              <br>&PROD.DESC&</td>
+            </tr>
+    
+            <tr>
+              <td>&SHOW.LIST&
+              <b>Your Price:</b> &YOUR.PRICE&
+              &QB.RESP&
+              &FET.AMT&</td>
+            </tr>
+    
+            &TOTAL.AVAIL&
+            &MIN.PKG.QTY&
+    
+            <tr>
+              <td><b>Quantity</b>
+              <input type="TEXT" name="QTY" onFocus="javascript: this.select();" value="&QTY&" size="4">&nbsp;&UOM&</td>
+            </tr>
+    
+            <tr>
+              <td><input type="image" name="CART.ADD" src="/WOEB/images/orderaddthis.gif" border=0 alt=""></td>
+            </tr>
+    
+            <tr>
+              <td>
+              <input type="image" name="GROUP.ADD" src="/WOEB/images/productgroupsaddthis.gif" border=0 alt="">
+              </td>
+            </tr>
+            &JNSTN.LINK&
+            &TECH.LINK&
+            &CUSTOM.LINK&
+          </table>
+        </td>
+    
+        <td align="center" valign="top">
+          <table border="0" cellpadding="5" cellspacing="0" width=100%>
+            <tr>
+              <td><b>Product Image</b>
+              <br>&IM.LINK&</td>
+            </tr>
+          </table>
+        </td>
+        &LIKE.ITEMS&
+      </tr>
+    </table>
+    
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td align="center" colspan=2 width=100%>
+          <table border="0" cellpadding="3" cellspacing="1" width=100%>
+            &TECH.INFO&
+            &CUSTOM.INFO&
+          </table>
+        </td>
+      </tr>
+    
+      <tr>
+        <td align="center" valign="middle" colspan=2 width=100%>&XREF.INFO&</td>
+      </tr>
+      &SUG.INFO&
+    </table>
+    </form>

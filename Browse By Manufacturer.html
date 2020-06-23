@@ -1,0 +1,46 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:23am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.MANUFACT -- Browse By Manufacturer **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td colspan=2 class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Browse By Manufacturer</a></td>
+      </tr>
+
+      <tr>
+        <td height=22 class="items">&IHTML&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+    </table>
+
+    <table border=0 cellpadding=2 cellspacing=0 width=100%>
+      <tr>
+        <td width=100%><b>Find all Manufacturers that begin with:</b><br>
+        &MNF.RESP&
+      </tr>
+
+      <tr>
+        <form method=post action="/eserv/eclipse.ecl">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.MANUFACT">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+
+        <td width=100%><br><b>Search for a Manufacturer:</b><br>
+        <input type="text" name="MNAME" size="20" value="">&nbsp;
+        &nbsp;<input type=image name="GO" border=0 alt="Go!" src="/WOEB/images/goalt.gif"></td>
+        </form>
+      </tr>
+
+      <tr>
+        <td><br>&RESULT&<br><br>
+        <ul>&MANUFACT.LINKS&</ul></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

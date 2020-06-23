@@ -1,0 +1,44 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:12am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.AR.AUTH -- A/R Authorization **-->
+<td width=100% valign="top">
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Account Authorization</a></td>
+      </tr>
+
+      <tr>
+        <td class="items" width=100%>&nbsp;&PASSER&</td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+          <table border="0" cellpadding="2" cellspacing="10">
+            <tr>
+              <td>
+              <form action="/eserv/eclipse.ecl" method="POST">
+              If you are having trouble finding your order, try <a href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&DISP.ID=WEBDISP.WOEB.ORD.SEARCH&TYPE=&ACT.TYPE&&TRACKNO=&TRK&">Advanced Search</a><br><br>
+              Enter your password, then click SEND<br><br>
+              <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.AR.AUTH">
+              <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+              <input type="HIDDEN" name="TYPE" value="&ACT&">
+              <input type="HIDDEN" name="AR.TYPE" value="&AR.TYPE&">
+              <input type="Password" name="D2" size="30">
+              <input type="submit" value="SEND ">
+              <input type="reset" value="CLEAR">
+              </form></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

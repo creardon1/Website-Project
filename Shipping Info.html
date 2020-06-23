@@ -1,0 +1,165 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 10:59am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.SHIP.INFO -- Shipping Info **-->
+
+<script language="Javascript">
+    function setSB()
+    {
+       ShipToForm.SHIPBRANCH.value = ShipToForm.DISPSHIPBRANCH.value;
+    }
+    function changeBR()
+    {
+       for(var i=0; i<ovrdSvias.length; i++)
+       {
+         if(ovrdSvias[i] == ShipToForm.SHIPVIA.value)
+         {
+           document.getElementById('CHANGEBRANCH').style.visibility = "visible";
+           return;
+         }
+       }
+  
+       document.getElementById('CHANGEBRANCH').style.visibility = "hidden";
+       ShipToForm.DISPSHIPBRANCH.value = ShipToForm.DEFAULTSHIPBRANCH.value;
+       setSB();
+    }
+   </script>
+  
+            <td width=100% valign="top">
+              <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+              <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("testdiv1");</SCRIPT>
+              <table border=0 cellpadding=3 cellspacing=0 width=100%>
+                <tr>
+                  <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOEB.MAIN&TRACKNO=&TRK&&DISP.ID=WEBDISP.WOE.ACCT.MAINT">&nbsp;My Account</a>
+                  <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Shipping Information &EXTRA.BC.INFO&
+                  </td>
+                </tr>
+  
+                <tr>
+                  <td class="items">
+                    <table cellpadding=0 cellspacing=0 width="100%" border=0>
+                      <tr>
+                        <td class="items">&PASSER&</td>
+                        <td class="items" align="right"><a href="/WOEB/help/shippingInfo.html" onClick="openUp(this.href);return false;">Shipping Information Help <img src="/WOEB/help/images/help2-alt2.gif" border=0></a></td>
+                      </tr>
+                      <tr>
+                        <td colspan=2>&INTRO.MSG&</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+  
+                <tr>
+                  <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+                </tr>
+  
+                <tr>
+                  <td class="bodytext" width=100% align=center>
+                  <script language="Javascript">
+                  var currentSTidx = '0'
+                  function setOldidx() {
+                    currentSTidx = ShipToForm.STSELECT.selectedIndex;
+                  }
+  
+                  function confirmSwitch() {
+                    var ans = confirm('Changing Ship-To accounts will reset all the fields in this\nform to the defaults for the new Ship-To account.\nContinue?')
+                    if (ans) {
+                      ShipToForm.submit();
+                    } else {
+                      ShipToForm.STSELECT.selectedIndex = currentSTidx;
+                    }
+                  }
+                  </script>
+  
+                  <form name="ShipToForm" action="/eserv/eclipse.ecl" method="POST">
+                  <input type="HIDDEN" name="PROCID" value="WEBPROC.WOE.SHIP.INFO">
+                  <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+                    <table border="0" cellpadding="3" cellspacing="0">
+                      <tr>
+                        <td><b>Ship-To Name </b><br>&NAME& </td>
+                        <td width=10 valign="top"></td>
+                        <td valign="top"></td>
+                     </tr>
+  
+                      <tr>
+                        <td><b>&ADDR1.OPT&</b><br>
+                        <input &TYPE& name="ADDR1" size="35" maxlength="35" value="&ADDR1&"><br></td>
+                        <td width=10 valign="top" align="right">&nbsp;</td>
+                        <td valign="top">&PO.REQ&<b>Purchase Order #</b><br>&PON&</td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>&nbsp;&ADDR2.OPT&</b><br>
+                        <input &TYPE& name="ADDR2" size="35" maxlength="35" value="&ADDR2&"><br></td>
+                        <td width=10 valign="top" align="right">&nbsp;</td>
+                        <td valign="top">&REL.REQ&<b>Release #</b><br>
+                        <input type="text" name="REL" size="20" maxlength="20" value="&REL&"></td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>&CITY.OPT&</b><br>
+                        <input &TYPE& name="CITY" size="35" maxlength="35" value="&CITY&"></td>
+                        <td width=10 valign="top" align="right">&nbsp;</td>
+                        <td>&OB.REQ&<b>Ordered By</b><br>&ORD.BY&</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <table border=0 cellpadding=0 cellspacing=0>
+                            <tr>
+                              <td><b>&ST.OPT&</b><br>
+                              <input &TYPE& name="ST" size="2" value="&ST&" maxlength="2"></td>
+                              <td width=24></td>
+                              <td><b>&ZIP.OPT&</b><br>
+                              <input &TYPE& name="ZIP" size="10" maxlength="10" value="&ZIP&"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td width=10>&nbsp;</td>
+                        <td><b>Order Status </b><br>
+                        <select name="ORD.STAT">
+  &STAT.LOOP.BEG&
+                        <option value="&STAT&" &DEF.SELECT&> &STAT.DESC&
+  &STAT.LOOP.END&
+                        </select></td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>&PHONE.REQ&</b><br>
+                        <input type="text" name="PHONE" size="20" maxlength="20" value="&PHONE&"></td>
+                        <td width=10>&nbsp;</td>
+                        <td valign="top"><b>Ship Via</b><br>&SHIP.VIAS& </td>
+                      </tr>
+  
+                      <tr>
+                        <td><b>&EMAIL.REQ&</b><br>
+                        <input type="text" name="EMAIL" size="35" maxlength="53" value="&EMAIL&"></td>
+                        <td width=10>&nbsp;</td>
+                        <td><b>Required Date </b><br>
+                        <input type="text" name="REQUIREDDATE" size="10" value="&REQDT&" maxlength="10">&nbsp;
+                        <a href="#" onClick="cal1x.select(document.ShipToForm.REQUIREDDATE,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a></td>
+                      </tr>
+  
+                      <tr>
+                        <td valign="top" colspan="3">&BRANCH&</td>
+                      </tr>
+  
+                      <tr>
+                        <td align="center" colspan=3><b>Shipping Instructions</b><br>
+                        <textarea name="SHIPINST" rows="4" cols="39">&SHIPINS&</textarea></td>
+                      </tr>
+  
+                      <tr>
+                        <td colspan=3 align="center"><br>&ITYPE&</td>
+                      </tr>
+                    </table>
+                  </form>
+                  </td>
+                </tr>
+              </table>
+              <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;z-index:9999;"></DIV>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+    </tr>
+  </table>

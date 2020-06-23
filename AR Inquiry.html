@@ -1,0 +1,228 @@
+<!--** CUS.FORM Version# 1 - 19/06/2020 - 10:18am - REACOL -->
+<!--** ECLIPSE WEB.FORMS~WOEB.AR.INQ -- A/R Inquiry **-->
+<td width=100% valign="top">
+    <SCRIPT LANGUAGE="JavaScript" SRC="/WOEB/js/CalendarPopup.js"></SCRIPT>
+    <SCRIPT LANGUAGE="JavaScript">document.write(CalendarPopup_getStyles()); var cal1x = new CalendarPopup("testdiv1");</SCRIPT>
+    <table border=0 cellpadding=3 cellspacing=0 width=100%>
+      <tr>
+        <td class="breadcrumbrow" height=22><img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt=""><a class="breadcrumblink" href="/eserv/eclipse.ecl?PROCID=WEBDISP.WOE.ACCT.MAINT&TRACKNO=&TRK&">&nbsp;My Account</a>
+        <img src="/WOEB/images/triangle.gif" width=10 height=9 border=0 alt="">&nbsp;Account Inquiry</td>
+      </tr>
+
+      <tr>
+        <td class="items">
+          <table cellpadding=0 cellspacing=0 border=0 width="100%">
+            <tr>
+              <td class="items">&nbsp;&ACCT.TYPE.MSG&</td>
+              <td class="items" align="right"><a href="/WOEB/help/acctinquiry.html" onclick="openUp(this.href);return false;">Account Inquiry Help <img src="/WOEB/help/images/help2-alt2.gif" border="0" height="11" width="11" alt="Click here for help"></a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="1" border=0 alt=""></td>
+      </tr>
+
+      <tr>
+        <td class="bodytext" width=100%>
+        <form action="/eserv/eclipse.ecl" name="ArInq" method="POST">
+        <input type="hidden" name="PROCID" value="WEBPROC.WOE.AR.INQ">
+        <input type="hidden" name="TRACKNO" value="&TRK&">
+        <input type ="hidden" name="TYPE" value="&ACT.TYPE&">
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td class="leftnav"><b>&nbsp;&NAME& &nbsp;</b> </td>
+              <td class="leftnav" align="right" nowrap><nobr>&nbsp;<b>As of Date:</b></nobr></td>
+              <td width=10 class=leftnav align="right" nowrap><nobr>
+                <input type="text" name="CHANGEDATE" size="10" value="&AOD&" maxlength="10">
+              &nbsp;<a href="#"onClick="cal1x.select(document.ArInq.CHANGEDATE,'anchor1x','MM/dd/yyyy'); return false;" NAME="anchor1x" ID="anchor1x"><img src="/WOEB/images/calendar.gif" width="26" height="15" border=0 align=absmiddle></a>&nbsp;
+                <input type=image src="/WOEB/images/go.gif" border=0 align=absmiddle></nobr></td>
+            </tr>
+          </table>
+          <DIV ID="testdiv1" STYLE="position:absolute;visibility:hidden;background-color:white;layer-background-color:white;"></DIV>
+
+          <table border=0 cellpadding=4 cellspacing=0 width=100%>
+            <tr>
+              <td valign="top">
+                <table border=0 cellpadding=1 cellspacing=0 width=100%>
+                  <tr>
+                    <td><b>Future:</b></td>
+                    <td align=right>&FUTURE& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Current:</b></td>
+                    <td align=right>&CURRENT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>31-60:</b></td>
+                    <td align=right>&THIRTY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>61-90:</b></td>
+                    <td align=right>&SIXTY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>91-120:</b></td>
+                    <td align=right>&NINETY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Over 120:</b></td>
+                    <td align=right>&ONETWENTY& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Total:</b></td>
+                    <td align=right>&TOT.AR& </td>
+                  </tr>
+                </table>
+              </td>
+
+              <td valing="top">
+                <table border=0 cellpadding=1 cellspacing=0 width=100%>
+                  <tr>
+                    <td><b>Deposits:</b></td>
+                    <td align=right>&DEPOSITS& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Orders:</b></td>
+                    <td align=right>&ORDERS& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>MTD Sales:</b></td>
+                    <td align=right>&MTD& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>YTD Sales:</b></td>
+                    <td align=right>&YTD& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>6-Mo Average:</b></td>
+                    <td align=right>&SIX.AVG& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>6-Mo High:</b></td>
+                    <td align=right>&SIX.HI& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Payment Days:</b></td>
+                    <td align=right>&PMT.DAYS& </td>
+                  </tr>
+                </table>
+              </td>
+
+              <td valign="top">
+                <table border=0 cellpadding=1 cellspacing=0 width=100%>
+                  <tr>
+                    <td><b>Contact</b></td>
+                    <td align="right"><b>Phone</b></td>
+                  </tr>
+
+                  <tr>
+                    <td>&CONTACT1& <br>&CONTACT2& </td>
+                    <td align="right">&PHONE1& <br>&PHONE2& </td>
+                  </tr>
+                </table>
+
+                <table border=0 cellpadding=0 cellspacing=0 width=100%>
+                  <tr>
+                    <td><b>Terms:</b></td>
+                    <td align=right>&TERMS& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Credit Limit:</b></td>
+                    <td align=right>&CR.LIMIT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Available:</b></td>
+                    <td align=right>&CR.AVL& </td>
+                  </tr>
+                </table>
+
+                <table border=0 cellpadding=0 cellspacing=0 width=100%>
+                  <tr>
+                    <td><b>Last Sale:</b></td>
+                    <td>&LAST.SALE.DATE& </td>
+                    <td align=right>&LAST.SALE.AMT& </td>
+                  </tr>
+
+                  <tr>
+                    <td><b>Last Payment:</b></td>
+                    <td>&LAST.PMT.DATE& </td>
+                    <td align=right>&LAST.PMT.AMT& </td>
+                  </tr>
+                </table>
+               </td>
+            </tr>
+          </table>
+
+          <table border=0 cellpadding=0 cellspacing=0 width=100%>
+            <tr>
+              <td width=560><img src="/WOEB/images/spacer.gif" width="560" height="5" border=0 alt=""></td>
+            </tr>
+          </table>
+
+          <table border=0 cellpadding=2 cellspacing=0 width=100%>
+            <tr>
+              <td class="items" width=100% colspan="9">
+              &ITEM.HTML&
+              </td>
+            </tr>
+
+            <tr>
+              <td class="leftnav"><b>Reference #</b></td>
+              <td class="leftnav"><b>Br</b></td>
+              <td class="leftnav"><b>Date</b></td>
+              <td class="leftnav" align="right"><b>Amount</b></td>
+              <td class="leftnav" align="right"><b>Payment</b></td>
+              <td class="leftnav" align="right"><b>Pmt Date</b></td>
+              <td class="leftnav" align="right"><b>Balance</b></td>
+              <td class="leftnav" align="right"><b>Age</b></td>
+              &SIG.HDR&
+            </tr>
+&AR.LOOP.BEG&
+            <tr>
+              <td><a class="bodytextlink" href="/eserv/eclipse.ecl?&LINE.DATA&">&AR.ID& </a></td>
+              <td>&BRANCH& </td>
+              <td>&DATE& </td>
+              <td align="right">&AMOUNT& </td>
+              <td align="right">&PAYMENT& </td>
+              <td align="right">&PMT.DATE& </td>
+              <td align="right">&BALANCE& </td>
+              <td align="right">&AGE& </td>
+              &SIG.BDY&
+            </tr>
+&AR.LOOP.END&
+          </table>
+
+          <table border=0 cellpadding=3 cellspacing=0 width=100%>
+            <tr>
+              <td class=leftnav><b>Or you can search by Reference # or PO # or Release # :</b></td>
+              <td class=leftnav align=right>&nbsp;
+              <input type=text name="WORDS" size="15">&nbsp;<input type=image src="/WOEB/images/go.gif" border=0 align=absmiddle></td>
+            </tr>
+          </table>
+        </form>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+</td>
+<td class="darkline"><img src="/WOEB/images/spacer.gif" width="1" height="1"></td>
+</tr>
+</table>

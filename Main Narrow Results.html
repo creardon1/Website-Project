@@ -1,0 +1,25 @@
+<!--** CUS.FORM Version# 1 - 23/06/2020 - 09:56am - REACOL -->
+<table width="100%">
+    <form name="narrow" action="/eserv/eclipse.ecl" method="POST">
+    <input type="HIDDEN" name="PROCID" value="WEBDISP.WOEB.MAIN">
+    <input type="HIDDEN" name="TRACKNO" value="&TRK&">
+    <input type="HIDDEN" name="MISC.ID" value="NARROW">
+    <input type="HIDDEN" name="FID" value="&FID&">
+    <input type="HIDDEN" name="CLEV" value="4">
+    <input type="HIDDEN" name="ORIG.SEARCH" value="&ORIG.SEARCH&">
+    <input type="HIDDEN" name="ORIG.IDSTRING" value="&ORIG.IDSTRING&">
+    <tr>
+      <td>
+      <i>Narrow your results:</i>&nbsp;
+      <a href="/WOEB/help/narrowresults.html" onclick="openUp(this.href);return false;">
+      <img src="/WOEB/help/images/help2-alt.gif" border="0" alt="Click here for help">
+      </a>
+      &nbsp;<input type="text" size=&NARROW.INPUT& name="NARROW.STR" value="&NARROW.STR&">
+      </td>
+      <td width="25%" align="left" valign="middle"><input type="image" src="/WOEB/images/goalt.gif" border=0></td>
+      <td align="right">
+      &SORT.MENU&
+      </td>
+    </tr>
+    </form>
+  </table>
